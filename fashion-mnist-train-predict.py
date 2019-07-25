@@ -42,12 +42,12 @@ def forward_prop(x_train, parameters):
 
 def back_prop(parameters, mem, x_train, y_train):
     length = len(y_train)
-    deravative2 = mem["probabilities"] - np.array(y_train).T
-    deravativeW2 = (1 / length) * np.dot(deravative2, (mem["Activation"]).T)
-    deravativeB2 = (1 / length) * np.sum(deravative2, axis=1, keepdims=True)
-    deravative1 = np.multiply(np.dot((parameters["W2"]).T, deravative2), 1 - np.square(mem["Activation"]))
-    deravativeW1 = (1 / length) * np.dot(deravative1, x_train)
-    deravativeB1 = (1 / length) * np.sum(deravative1, axis=1, keepdims=True)
+    derivative2 = mem["probabilities"] - np.array(y_train).T
+    derivativeW2 = (1 / length) * np.dot(deravative2, (mem["Activation"]).T)
+    derivativeB2 = (1 / length) * np.sum(deravative2, axis=1, keepdims=True)
+    derivative1 = np.multiply(np.dot((parameters["W2"]).T, deravative2), 1 - np.square(mem["Activation"]))
+    derivativeW1 = (1 / length) * np.dot(deravative1, x_train)
+    derivativeB1 = (1 / length) * np.sum(deravative1, axis=1, keepdims=True)
     gradients = {"dW1": deravativeW1,
                  "db1": deravativeB1,
                  "dW2": deravativeW2,
