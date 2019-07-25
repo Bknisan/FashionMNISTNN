@@ -25,6 +25,6 @@ in order to use the code properly you should merge those files.
 
 linux: 
 1. enter the terminal and cd to the files path.
-2. use the cat command as follows : "cat train_xaa train_xab train_xac train_xad train_xae train_xaf > train_x" 
+2. use the cat command as follows : **cat train_xaa train_xab train_xac train_xad train_xae train_xaf > train_x**
 3. put the files in the same path/directory.
 4. run the .py file and get your "test_y" output file. 
